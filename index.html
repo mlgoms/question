@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name=" viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quer namorar comigo?</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
 
     <style>
         body{
@@ -20,12 +19,12 @@
             border-radius: 20px;
             text-align: center;
             padding-top: 50px;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family:'Courier New', Courier, monospace;
         }
-        #sim{ 
+        #sim{
             height: 40px;
             width: 60px;
-            background-color: pink;
+            background-color: rgb(243, 114, 135);
             border: 2px solid white;
             border-radius: 10px;
             color: white;
@@ -35,50 +34,53 @@
             position: absolute;
             height: 40px;
             width: 60px;
-            background-color: pink;
+            background-color: rgb(243, 114, 135);
             border: 2px solid white;
             border-radius: 10px;
             color: white;
-            margin-left: 10px ;
-         }
+            margin-left: 10px;
+        }
+
     </style>
-    
+
 </head>
 <body>
 
     <div class="painel">
-        <img src="https://img1.picmix.com/output/stamp/normal/4/1/1/6/296114_ab78f.gif" alt="">
+        <h1>Queria saber uma coisa</h1>
 
-        <h1> Quer namorar comigo? </h1>
+        <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="">
 
-        <button id="sim" onclick="parabens()"> sim </button></a>
-        <button onmouseover="fuja()" id="nao"> não </button>      
+        <h2>Aceita namorar comigo? </h2>
+        
 
-    </div> 
+        <a href="https://www.youtube.com/watch?v=oRvND-r57Us"><button id="sim" > Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+        
+    </div>
 
     <script>
         function fuja(){
-            var botaNao = document.getElementById("nao")
-            
+            var botaoNao = document.getElementById("nao")
+
             var larguraJanela = window.innerWidth;
             var alturaJanela = window.innerHeight;
 
-            var maxX = larguraJanela = botaoNao.offsetWidth;
-            var maxY = alturaJanela = botaoNao.offsetHeight;
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
 
             var aleatorioX = Math.floor(Math.random() * maxX);
             var aleatorioY = Math.floor(Math.random() * maxY);
 
             botaoNao.style.left = aleatorioX + "px";
             botaoNao.style.top = aleatorioY + "px";
-        
-        
+
+
         }
-
-        function parabens()
-
     </script>
 
-</body>
 
+
+    
+</body>
 </html>
